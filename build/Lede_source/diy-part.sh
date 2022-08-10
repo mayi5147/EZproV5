@@ -17,11 +17,25 @@ uci commit network                                                          # �
 uci set system.@system[0].hostname='OpenWrt'                            # 修改主机名称为OpenWrt-123
 EOF
 
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile            # 选择argon为默认主题
 
-sed -i "s/OpenWrt /EZProV5 by OpenWrt /g" $ZZZ           # 增加个性名字 ${Author} 默认为你的github帐号
+# 把bootstrap替换成argon为源码必选主题（可自行修改您要的,主题名称必须对,比如下面代码的[argon],源码内必须有该主题,要不然编译失败）
+sed -i "s/bootstrap/argon/ig" feeds/luci/collections/luci/Makefile
 
-sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/x86/Makefile                               # x86机型,默认内核5.4，修改内核为5.10
+
+# 增加个性名字 ${Author} 默认为你的github帐号
+sed -i "s/OpenWrt /EZProV5 by OpenWrt /g" $ZZZ       
+
+
+# 删除默认防火墙
+sed -i '/to-ports 53/d' "$ZZZ_PATH"
+
+
+# 取消路由器每天跑分任务
+sed -i "/exit 0/i\sed -i '/coremark/d' /etc/crontabs/root" "$FIN_PATH"
+
+
+# 修改默认内核（所有机型都适用，只要您编译的机型源码附带了其他内核，请至编译说明的第12条查看）
+#sed -i 's/PATCHVER:=5.15/PATCHVER:=5.10/g' target/linux/x86/Makefile
 
 
 # 修改插件名字
