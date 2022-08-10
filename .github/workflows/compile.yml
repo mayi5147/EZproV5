@@ -9,7 +9,7 @@
 #
 
 
-name: compile
+name: 开始编译固件
 on:
   workflow_dispatch:
   push:
