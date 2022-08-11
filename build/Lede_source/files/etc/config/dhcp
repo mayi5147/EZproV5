@@ -96,8 +96,8 @@ config domain
 	option ip '192.168.101.136'
 
 config domain
-	option name 'INPHICI18'
-	option ip '192.168.101.140'
+	option name 'UNT403A'
+	option ip '192.168.101.141'
 
 config domain
 	option name 'XiaoDu'
@@ -132,6 +132,6 @@ config domain
 	option ip '192.168.101.107'
 
 config domain
-	option name 'HG6821M'
+	option name 'F673AV9a'
 	option ip '192.168.1.1'
 
