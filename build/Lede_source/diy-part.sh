@@ -23,7 +23,7 @@ sed -i "s/bootstrap/argon/ig" feeds/luci/collections/luci/Makefile
 
 
 # 增加个性名字 ${Author} 默认为你的github帐号
-sed -i "s/OpenWrt /EZProV5 by OpenWrt /g" $ZZZ       
+sed -i "s/OpenWrt /EZProV5 by OpenWrt /g" "$ZZZ_PATH"      
 
 
 # 删除默认防火墙
