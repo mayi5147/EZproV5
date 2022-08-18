@@ -96,7 +96,7 @@ config domain
 	option ip '192.168.101.136'
 
 config domain
-	option name 'UNT403A'
+	option name 'XiaoTianE'
 	option ip '192.168.101.141'
 
 config domain
@@ -130,6 +130,10 @@ config domain
 config domain
 	option name 'ZWQ3'
 	option ip '192.168.101.107'
+
+config domain
+	option name 'UNT403A'
+	option ip '192.168.1.2'
 
 config domain
 	option name 'F673AV9a'
