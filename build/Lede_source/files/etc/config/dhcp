@@ -96,7 +96,7 @@ config domain
 	option ip '192.168.101.136'
 
 config domain
-	option name 'XiaoTianE'
+	option name 'LittleSwan'
 	option ip '192.168.101.141'
 
 config domain
